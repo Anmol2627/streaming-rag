@@ -174,3 +174,18 @@ Benchmark suite: `streaming-rag-dev-demo-corpus/corpus/benchmarks/benchmark_suit
 | Architecture Brief (G2) | `docs/ARCHITECTURE_BRIEF.md` |
 | Benchmarking Report (G3) | `docs/BENCHMARK_REPORT.md` |
 | Telemetry Schema (G6) | `docs/TELEMETRY_SCHEMA.md` |
+
+## PRISM_GENAI_HACKATHON_Y2026 Submission Details
+
+**TAG**: `PRISM_GENAI_HACKATHON_Y2026`
+
+### Submission Checklist
+- [x] **Source Code**: Available in this repository.
+- [x] **Presentation**: [Link to Presentation (Google Slides)](https://docs.google.com/presentation/d/1oy2t1gb010c9cifFBJCETGIDLeRl_oOfcNjDpmElZSY/edit?usp=sharing)
+- [x] **Video**: [Demo Video Link (Google Drive)](https://drive.google.com/file/d/1vGF9UDgMhknset2pSfAOgK-sewjV5LZr/view?usp=sharing)
+- [x] **AI Disclosure**: Included in repository as [LangAI3.0_AI_Disclosure_Filled.docx](./LangAI3.0_AI_Disclosure_Filled.docx)
+- [x] **README**: Detailed ReadMe file included (this file).
+- [ ] **APK/SDK (if any)**: Not applicable.
+- [x] Added `requirements.txt` to the Github project.
+
+*Refer FAQ for more details on submission guidelines.*
