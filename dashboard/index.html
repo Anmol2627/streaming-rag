@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Live RAG — Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="top-nav">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <h1>Streaming Live RAG</h1>
+            </div>
+            <div class="session-controls">
+                <select id="scenario-select">
+                    <option value="ER-01">Golden 1: Early Retrieval</option>
+                    <option value="MI-01">Golden 2: Multi-Intent</option>
+                    <option value="LD-01">Golden 3: Late Detail (v1)</option>
+                    <option value="LD-02">Golden 3: Late Detail (v2)</option>
+                    <option value="NR-01">Golden 4: No-Retrieval</option>
+                    <option value="UN-01">Golden 5: Uncertainty</option>
+                </select>
+                <button id="btn-load-scenario" class="btn btn-secondary">Load Scenario</button>
+                <button id="btn-new-session" class="btn btn-primary">New Session</button>
+                <div class="status-badge" id="conn-status">Disconnected</div>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <!-- Left Column: Input & Transcript -->
+            <div class="panel col-left">
+                <div class="panel-header">
+                    <h2>Live Transcript Stream</h2>
+                    <span class="badge" id="session-id-display">No Session</span>
+                </div>
+                
+                <div class="transcript-box" id="transcript-container">
+                    <!-- Transcript chunks go here -->
+                    <div class="placeholder-text">Waiting for input stream...</div>
+                </div>
+
+                <div class="input-area">
+                    <textarea id="chunk-input" placeholder="Type a chunk and press Enter to stream..."></textarea>
+                    <div class="input-controls">
+                        <button id="btn-send-chunk" class="btn btn-primary">Stream Chunk</button>
+                        <button id="btn-end-turn" class="btn btn-success">End Turn & Synthesize</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Column: Controller & Evidence -->
+            <div class="panel col-middle">
+                <div class="panel-header">
+                    <h2>Retrieval Controller</h2>
+                </div>
+                
+                <div class="controller-state">
+                    <div class="state-card">
+                        <div class="state-label">Decision</div>
+                        <div class="state-value" id="ctrl-decision">WAIT</div>
+                    </div>
+                    <div class="state-card">
+                        <div class="state-label">Reason</div>
+                        <div class="state-value text-mono text-sm" id="ctrl-reason">-</div>
+                    </div>
+                    <div class="state-card">
+                        <div class="state-label">Buffer</div>
+                        <div class="state-value text-italic text-sm" id="ctrl-buffer">-</div>
+                    </div>
+                </div>
+
+                <div class="panel-header mt-4">
+                    <h2>Active Sub-Queries</h2>
+                    <span class="badge" id="sq-count">0</span>
+                </div>
+                <div class="sub-queries-list" id="sub-queries-container">
+                    <div class="placeholder-text">No queries dispatched yet.</div>
+                </div>
+
+                <div class="panel-header mt-4">
+                    <h2>Retrieved Evidence</h2>
+                </div>
+                <div class="evidence-list" id="evidence-container">
+                    <div class="placeholder-text">Waiting for retrieval...</div>
+                </div>
+            </div>
+
+            <!-- Right Column: Synthesis & Telemetry -->
+            <div class="panel col-right">
+                <div class="panel-header">
+                    <h2>Answer Version <span class="badge highlight" id="answer-version">0</span></h2>
+                </div>
+                
+                <div class="answer-box" id="answer-container">
+                    <div class="placeholder-text">Waiting for synthesis...</div>
+                </div>
+
+                <div class="panel-header mt-4">
+                    <h2>Turn Metrics</h2>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value" id="m-ttfr">- ms</div>
+                        <div class="metric-label">Time to 1st Retrieval</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="m-ttft">- ms</div>
+                        <div class="metric-label">Time to 1st Token</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="m-tokens">-</div>
+                        <div class="metric-label">Total Tokens</div>
+                    </div>
+                </div>
+
+                <div class="panel-header mt-4">
+                    <h2>Telemetry Log</h2>
+                    <button class="btn btn-icon" id="btn-clear-log" title="Clear Log">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path></svg>
+                    </button>
+                </div>
+                <div class="telemetry-log text-mono text-xs" id="telemetry-container">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

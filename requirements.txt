@@ -1,0 +1,22 @@
+# Streaming Live RAG — Pinned Dependencies
+# Backend
+fastapi==0.115.12
+uvicorn[standard]==0.34.3
+sse-starlette==2.3.6
+pydantic==2.11.4
+python-dotenv==1.1.0
+
+# Embeddings & Vector Search
+sentence-transformers==4.1.0
+faiss-cpu==1.11.0
+numpy==2.3.0
+
+# Sparse Retrieval
+rank_bm25==0.2.2
+
+# LLM Client (Groq free tier)
+groq==0.25.0
+
+# Utilities
+uuid6==2024.7.10
+aiofiles==24.1.0

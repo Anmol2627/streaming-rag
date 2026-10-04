@@ -1,0 +1,1621 @@
+{
+  "corpus_version": "1.0",
+  "total_scenarios": 48,
+  "scenarios": [
+    {
+      "scenario_id": "ER-01",
+      "category": "early_retrieval",
+      "transcript_chunks": [
+        "I need a venue in Bangalore...",
+        "...for a hundred people...",
+        "...sometime next month for a hackathon."
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE",
+        "WAIT"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "Bangalore venue capacity 100"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_03"
+      ],
+      "expected_relevant_sections": [
+        "Doc_03 \u00a72",
+        "Doc_03 \u00a77"
+      ],
+      "expected_answer_summary": "Recommends Room B-204 (100 seated theatre-style); notes 15 business day lead time.",
+      "expected_citations": [
+        "Doc_03 \u00a72",
+        "Doc_03 \u00a77"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "retrieval_completed",
+        "turn_summary"
+      ],
+      "expected_grounding_behavior": "Fully grounded; retrieval begins before utterance end."
+    },
+    {
+      "scenario_id": "ER-02",
+      "category": "early_retrieval",
+      "transcript_chunks": [
+        "I'm looking to book Riverside...",
+        "...for a team offsite of 60 people."
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "Riverside capacity 60"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_02"
+      ],
+      "expected_relevant_sections": [
+        "Doc_02 \u00a72"
+      ],
+      "expected_answer_summary": "Confirms Riverside main hall (80 seated capacity) fits 60 attendees.",
+      "expected_citations": [
+        "Doc_02 \u00a72"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "retrieval_completed"
+      ],
+      "expected_grounding_behavior": "Fully grounded."
+    },
+    {
+      "scenario_id": "ER-03",
+      "category": "early_retrieval",
+      "transcript_chunks": [
+        "What's the password rotation policy...",
+        "...for admin accounts?"
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "admin account password rotation schedule"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_16"
+      ],
+      "expected_relevant_sections": [
+        "Doc_16 \u00a73"
+      ],
+      "expected_answer_summary": "Admin accounts rotate every 60 days under SEC-014.",
+      "expected_citations": [
+        "Doc_16 \u00a73"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "retrieval_completed"
+      ],
+      "expected_grounding_behavior": "Fully grounded."
+    },
+    {
+      "scenario_id": "ER-04",
+      "category": "early_retrieval",
+      "transcript_chunks": [
+        "I want to check the notice period...",
+        "...for resigning."
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "resignation notice period"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_14",
+        "Doc_15"
+      ],
+      "expected_relevant_sections": [
+        "Doc_14 \u00a72",
+        "Doc_15 \u00a72"
+      ],
+      "expected_answer_summary": "Surfaces both the handbook (30 days) and the 2026 memo (45 days, superseding).",
+      "expected_citations": [
+        "Doc_14 \u00a72",
+        "Doc_15 \u00a72"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "retrieval_completed"
+      ],
+      "expected_grounding_behavior": "Conflict correctly surfaced, not silently resolved."
+    },
+    {
+      "scenario_id": "ER-05",
+      "category": "early_retrieval",
+      "transcript_chunks": [
+        "Can employees claim reimbursement...",
+        "...for co-working space membership?"
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "co-working space reimbursement"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_18"
+      ],
+      "expected_relevant_sections": [
+        "Doc_18 \u00a75"
+      ],
+      "expected_answer_summary": "Up to INR 5,000/month, subject to manager approval.",
+      "expected_citations": [
+        "Doc_18 \u00a75"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "retrieval_completed"
+      ],
+      "expected_grounding_behavior": "Fully grounded."
+    },
+    {
+      "scenario_id": "ER-06",
+      "category": "early_retrieval",
+      "transcript_chunks": [
+        "What's the meal subsidy...",
+        "...at the Bangalore cafeteria?"
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "Bangalore cafeteria meal subsidy"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_19"
+      ],
+      "expected_relevant_sections": [
+        "Doc_19 \u00a73"
+      ],
+      "expected_answer_summary": "INR 150 per working day, applied automatically at point of sale.",
+      "expected_citations": [
+        "Doc_19 \u00a73"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "retrieval_completed"
+      ],
+      "expected_grounding_behavior": "Fully grounded."
+    },
+    {
+      "scenario_id": "ER-07",
+      "category": "early_retrieval",
+      "transcript_chunks": [
+        "How many days of casual leave...",
+        "...do employees get per year?"
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "casual leave entitlement"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_13"
+      ],
+      "expected_relevant_sections": [
+        "Doc_13 \u00a72"
+      ],
+      "expected_answer_summary": "12 days of casual leave per calendar year.",
+      "expected_citations": [
+        "Doc_13 \u00a72"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "retrieval_completed"
+      ],
+      "expected_grounding_behavior": "Fully grounded."
+    },
+    {
+      "scenario_id": "NR-01",
+      "category": "no_retrieval",
+      "transcript_chunks": [
+        "Can you repeat that?"
+      ],
+      "expected_controller_decisions": [
+        "NO_RETRIEVAL"
+      ],
+      "trigger_type_if_retrieve": null,
+      "expected_sub_intents": [],
+      "expected_retrieved_doc_ids": [],
+      "expected_relevant_sections": [],
+      "expected_answer_summary": "Reuses the prior turn's answer/citations verbatim, reformatted as requested (or takes no action for a plain acknowledgment).",
+      "expected_citations": [
+        "<same as prior turn>"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision"
+      ],
+      "expected_grounding_behavior": "No retrieval_started event fires; reason=presentation_restructure."
+    },
+    {
+      "scenario_id": "NR-02",
+      "category": "no_retrieval",
+      "transcript_chunks": [
+        "Make it shorter."
+      ],
+      "expected_controller_decisions": [
+        "NO_RETRIEVAL"
+      ],
+      "trigger_type_if_retrieve": null,
+      "expected_sub_intents": [],
+      "expected_retrieved_doc_ids": [],
+      "expected_relevant_sections": [],
+      "expected_answer_summary": "Reuses the prior turn's answer/citations verbatim, reformatted as requested (or takes no action for a plain acknowledgment).",
+      "expected_citations": [
+        "<same as prior turn>"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision"
+      ],
+      "expected_grounding_behavior": "No retrieval_started event fires; reason=presentation_restructure."
+    },
+    {
+      "scenario_id": "NR-03",
+      "category": "no_retrieval",
+      "transcript_chunks": [
+        "What did you just say?"
+      ],
+      "expected_controller_decisions": [
+        "NO_RETRIEVAL"
+      ],
+      "trigger_type_if_retrieve": null,
+      "expected_sub_intents": [],
+      "expected_retrieved_doc_ids": [],
+      "expected_relevant_sections": [],
+      "expected_answer_summary": "Reuses the prior turn's answer/citations verbatim, reformatted as requested (or takes no action for a plain acknowledgment).",
+      "expected_citations": [
+        "<same as prior turn>"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision"
+      ],
+      "expected_grounding_behavior": "No retrieval_started event fires; reason=presentation_restructure."
+    },
+    {
+      "scenario_id": "NR-04",
+      "category": "no_retrieval",
+      "transcript_chunks": [
+        "Summarize that in one sentence."
+      ],
+      "expected_controller_decisions": [
+        "NO_RETRIEVAL"
+      ],
+      "trigger_type_if_retrieve": null,
+      "expected_sub_intents": [],
+      "expected_retrieved_doc_ids": [],
+      "expected_relevant_sections": [],
+      "expected_answer_summary": "Reuses the prior turn's answer/citations verbatim, reformatted as requested (or takes no action for a plain acknowledgment).",
+      "expected_citations": [
+        "<same as prior turn>"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision"
+      ],
+      "expected_grounding_behavior": "No retrieval_started event fires; reason=presentation_restructure."
+    },
+    {
+      "scenario_id": "NR-05",
+      "category": "no_retrieval",
+      "transcript_chunks": [
+        "Can you say that again but as a bulleted list?"
+      ],
+      "expected_controller_decisions": [
+        "NO_RETRIEVAL"
+      ],
+      "trigger_type_if_retrieve": null,
+      "expected_sub_intents": [],
+      "expected_retrieved_doc_ids": [],
+      "expected_relevant_sections": [],
+      "expected_answer_summary": "Reuses the prior turn's answer/citations verbatim, reformatted as requested (or takes no action for a plain acknowledgment).",
+      "expected_citations": [
+        "<same as prior turn>"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision"
+      ],
+      "expected_grounding_behavior": "No retrieval_started event fires; reason=presentation_restructure."
+    },
+    {
+      "scenario_id": "NR-06",
+      "category": "no_retrieval",
+      "transcript_chunks": [
+        "Translate your last answer into Hindi."
+      ],
+      "expected_controller_decisions": [
+        "NO_RETRIEVAL"
+      ],
+      "trigger_type_if_retrieve": null,
+      "expected_sub_intents": [],
+      "expected_retrieved_doc_ids": [],
+      "expected_relevant_sections": [],
+      "expected_answer_summary": "Reuses the prior turn's answer/citations verbatim, reformatted as requested (or takes no action for a plain acknowledgment).",
+      "expected_citations": [
+        "<same as prior turn>"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision"
+      ],
+      "expected_grounding_behavior": "No retrieval_started event fires; reason=presentation_restructure."
+    },
+    {
+      "scenario_id": "NR-07",
+      "category": "no_retrieval",
+      "transcript_chunks": [
+        "Thanks, that's clear."
+      ],
+      "expected_controller_decisions": [
+        "NO_RETRIEVAL"
+      ],
+      "trigger_type_if_retrieve": null,
+      "expected_sub_intents": [],
+      "expected_retrieved_doc_ids": [],
+      "expected_relevant_sections": [],
+      "expected_answer_summary": "Reuses the prior turn's answer/citations verbatim, reformatted as requested (or takes no action for a plain acknowledgment).",
+      "expected_citations": [
+        "<same as prior turn>"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision"
+      ],
+      "expected_grounding_behavior": "No retrieval_started event fires; reason=acknowledgment_no_action."
+    },
+    {
+      "scenario_id": "MI-01",
+      "category": "multi_intent",
+      "transcript_chunks": [
+        "I need a venue for 30 people in Pune,",
+        "what's the cancellation policy,",
+        "and is catering available?"
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE",
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "multi_intent",
+      "expected_sub_intents": [
+        "venue capacity 30 Pune",
+        "cancellation policy venue booking",
+        "catering availability Pune venue"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_01",
+        "Doc_04",
+        "Doc_05"
+      ],
+      "expected_relevant_sections": [
+        "Doc_01 \u00a72",
+        "Doc_04 \u00a75",
+        "Doc_01 \u00a75",
+        "Doc_05 \u00a77"
+      ],
+      "expected_answer_summary": "Recommends Grand Hall (fits 30); 14-day full-refund cancellation rule; Spice Route catering available on-site.",
+      "expected_citations": [
+        "Doc_01 \u00a72",
+        "Doc_04 \u00a75",
+        "Doc_01 \u00a75",
+        "Doc_05 \u00a77"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "decomposition",
+        "retrieval_started",
+        "retrieval_completed",
+        "fusion",
+        "claim_generated"
+      ],
+      "expected_grounding_behavior": "Each claim cited from its own sub-intent's evidence set."
+    },
+    {
+      "scenario_id": "MI-02",
+      "category": "multi_intent",
+      "transcript_chunks": [
+        "What's the international travel approval process,",
+        "and what's the per diem rate?"
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "multi_intent",
+      "expected_sub_intents": [
+        "international approval process",
+        "international per diem rate"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_09"
+      ],
+      "expected_relevant_sections": [
+        "Doc_09 \u00a72",
+        "Doc_09 \u00a76"
+      ],
+      "expected_answer_summary": "Director pre-approval required; per diem is USD 60/day.",
+      "expected_citations": [
+        "Doc_09 \u00a72",
+        "Doc_09 \u00a76"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "decomposition",
+        "retrieval_started",
+        "fusion",
+        "claim_generated"
+      ],
+      "expected_grounding_behavior": "Fully grounded."
+    },
+    {
+      "scenario_id": "MI-03",
+      "category": "multi_intent",
+      "transcript_chunks": [
+        "Can I book Room B-204 in Bangalore,",
+        "and does it have Wi-Fi that can handle 150 people?"
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "multi_intent",
+      "expected_sub_intents": [
+        "Room B-204 booking",
+        "Room B-204 Wi-Fi capacity"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_03"
+      ],
+      "expected_relevant_sections": [
+        "Doc_03 \u00a72",
+        "Doc_03 \u00a74"
+      ],
+      "expected_answer_summary": "Room B-204 seats 100 theatre-style; Wi-Fi supports 200 simultaneous connections.",
+      "expected_citations": [
+        "Doc_03 \u00a72",
+        "Doc_03 \u00a74"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "decomposition",
+        "retrieval_started",
+        "fusion"
+      ],
+      "expected_grounding_behavior": "Fully grounded."
+    },
+    {
+      "scenario_id": "MI-04",
+      "category": "multi_intent",
+      "transcript_chunks": [
+        "What's the leave carry-forward rule,",
+        "and how many earned leave days do we get?"
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "multi_intent",
+      "expected_sub_intents": [
+        "leave carry-forward rule",
+        "earned leave entitlement"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_13"
+      ],
+      "expected_relevant_sections": [
+        "Doc_13 \u00a76",
+        "Doc_13 \u00a74"
+      ],
+      "expected_answer_summary": "Up to 10 days of earned leave carry forward; 18 earned leave days accrued per year.",
+      "expected_citations": [
+        "Doc_13 \u00a76",
+        "Doc_13 \u00a74"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "decomposition",
+        "retrieval_started"
+      ],
+      "expected_grounding_behavior": "Fully grounded."
+    },
+    {
+      "scenario_id": "MI-05",
+      "category": "multi_intent",
+      "transcript_chunks": [
+        "Is Urban Bites available for a Bangalore event,",
+        "what's the pricing,",
+        "and do they handle dietary restrictions?"
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE",
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "multi_intent",
+      "expected_sub_intents": [
+        "Urban Bites availability Bangalore",
+        "Urban Bites pricing",
+        "Urban Bites allergy accommodation"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_06"
+      ],
+      "expected_relevant_sections": [
+        "Doc_06 \u00a71",
+        "Doc_06 \u00a74",
+        "Doc_06 \u00a75"
+      ],
+      "expected_answer_summary": "Available (Bangalore-primary vendor); INR 350/700 per head; allergen-free alternatives available with no minimum notice.",
+      "expected_citations": [
+        "Doc_06 \u00a71",
+        "Doc_06 \u00a74",
+        "Doc_06 \u00a75"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "decomposition",
+        "retrieval_started",
+        "fusion"
+      ],
+      "expected_grounding_behavior": "Tests non-over-fragmentation: 3 sub-intents resolved from one document without unnecessary duplicate retrieval calls."
+    },
+    {
+      "scenario_id": "MI-06",
+      "category": "multi_intent",
+      "transcript_chunks": [
+        "What's the password complexity requirement,",
+        "and is MFA required for VPN access?"
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "multi_intent",
+      "expected_sub_intents": [
+        "password complexity requirement",
+        "MFA requirement VPN"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_16"
+      ],
+      "expected_relevant_sections": [
+        "Doc_16 \u00a72",
+        "Doc_16 \u00a74"
+      ],
+      "expected_answer_summary": "Minimum 12 characters with upper/number/special char; MFA mandatory for VPN.",
+      "expected_citations": [
+        "Doc_16 \u00a72",
+        "Doc_16 \u00a74"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "decomposition",
+        "retrieval_started"
+      ],
+      "expected_grounding_behavior": "Fully grounded."
+    },
+    {
+      "scenario_id": "MI-07",
+      "category": "multi_intent",
+      "transcript_chunks": [
+        "What's the deposit for Riverside,",
+        "and what's the approval workflow if the total cost is high?"
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "multi_intent",
+      "expected_sub_intents": [
+        "Riverside deposit amount",
+        "high-cost booking approval workflow"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_02",
+        "Doc_04"
+      ],
+      "expected_relevant_sections": [
+        "Doc_02 \u00a73",
+        "Doc_04 \u00a74"
+      ],
+      "expected_answer_summary": "INR 20,000 refundable deposit; bookings over INR 50,000 total require budget-owner approval.",
+      "expected_citations": [
+        "Doc_02 \u00a73",
+        "Doc_04 \u00a74"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "decomposition",
+        "retrieval_started",
+        "fusion"
+      ],
+      "expected_grounding_behavior": "Cross-document sub-intents correctly associated with distinct citations."
+    },
+    {
+      "scenario_id": "LD-01",
+      "category": "late_detail",
+      "transcript_chunks": [
+        "I need a venue for 30 people in Pune, what's the cancellation policy, and is catering available?",
+        "[Answer v1 delivered]",
+        "Actually, make it 50 people."
+      ],
+      "expected_controller_decisions": [
+        "WAIT\u2192RETRIEVE(multi_intent)",
+        "-",
+        "RETRIEVE(late_detail)"
+      ],
+      "trigger_type_if_retrieve": "late_detail",
+      "expected_sub_intents": [
+        "updated venue capacity 50 Pune"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_02"
+      ],
+      "expected_relevant_sections": [
+        "Doc_02 \u00a72"
+      ],
+      "expected_answer_summary": "v2: venue recommendation changes to Riverside (fits 50); cancellation and catering claims unchanged.",
+      "expected_citations": [
+        "Doc_02 \u00a72 (replaces Doc_01 \u00a72)",
+        "Doc_04 \u00a75 (unchanged)",
+        "Doc_05 \u00a77 (unchanged)"
+      ],
+      "answer_versioning_expected": true,
+      "affected_claims": [
+        "venue/capacity claim only"
+      ],
+      "expected_telemetry_events": [
+        "answer_version",
+        "claim_generated"
+      ],
+      "expected_grounding_behavior": "No full-corpus re-search; unaffected claims byte-identical to v1."
+    },
+    {
+      "scenario_id": "LD-02",
+      "category": "late_detail",
+      "transcript_chunks": [
+        "I need international travel approval for a trip to Singapore.",
+        "[Answer v1 delivered]",
+        "Actually, I'm now booking this only 10 days before departure."
+      ],
+      "expected_controller_decisions": [
+        "WAIT\u2192RETRIEVE(provisional)",
+        "-",
+        "RETRIEVE(late_detail)"
+      ],
+      "trigger_type_if_retrieve": "late_detail",
+      "expected_sub_intents": [
+        "late-booking exception applicability"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_09"
+      ],
+      "expected_relevant_sections": [
+        "Doc_09 \u00a74"
+      ],
+      "expected_answer_summary": "v2: late-booking exception now applies, requiring director written approval; visa and per-diem claims unchanged.",
+      "expected_citations": [
+        "Doc_09 \u00a74 (new)",
+        "Doc_09 \u00a75 (unchanged)",
+        "Doc_09 \u00a76 (unchanged)"
+      ],
+      "answer_versioning_expected": true,
+      "affected_claims": [
+        "approval-requirement claim only"
+      ],
+      "expected_telemetry_events": [
+        "answer_version",
+        "claim_generated"
+      ],
+      "expected_grounding_behavior": "Targeted retrieval only for the late-booking exception clause."
+    },
+    {
+      "scenario_id": "LD-03",
+      "category": "late_detail",
+      "transcript_chunks": [
+        "What's the catering budget for our team meeting?",
+        "[Answer v1 delivered]",
+        "Actually, this is now a client-facing event."
+      ],
+      "expected_controller_decisions": [
+        "WAIT\u2192RETRIEVE(provisional)",
+        "-",
+        "RETRIEVE(late_detail)"
+      ],
+      "trigger_type_if_retrieve": "late_detail",
+      "expected_sub_intents": [
+        "client-facing event budget cap"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_07"
+      ],
+      "expected_relevant_sections": [
+        "Doc_07 \u00a75"
+      ],
+      "expected_answer_summary": "v2: budget cap changes from INR 400 to INR 800 per head; vendor-list and lead-time claims unchanged.",
+      "expected_citations": [
+        "Doc_07 \u00a75 (updated)",
+        "Doc_07 \u00a72 (unchanged)",
+        "Doc_07 \u00a73 (unchanged)"
+      ],
+      "answer_versioning_expected": true,
+      "affected_claims": [
+        "budget cap claim only"
+      ],
+      "expected_telemetry_events": [
+        "answer_version",
+        "claim_generated"
+      ],
+      "expected_grounding_behavior": "No full-corpus re-search."
+    },
+    {
+      "scenario_id": "LD-04",
+      "category": "late_detail",
+      "transcript_chunks": [
+        "Book Grand Hall for a half-day session.",
+        "[Answer v1 delivered]",
+        "Actually, we need it for the full day."
+      ],
+      "expected_controller_decisions": [
+        "WAIT\u2192RETRIEVE(provisional)",
+        "-",
+        "RETRIEVE(late_detail)"
+      ],
+      "trigger_type_if_retrieve": "late_detail",
+      "expected_sub_intents": [
+        "Grand Hall full-day pricing"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_01"
+      ],
+      "expected_relevant_sections": [
+        "Doc_01 \u00a73"
+      ],
+      "expected_answer_summary": "v2: pricing updates from INR 18,000 (half-day) to INR 30,000 (full-day); capacity and AV claims unchanged.",
+      "expected_citations": [
+        "Doc_01 \u00a73 (updated)",
+        "Doc_01 \u00a72 (unchanged)",
+        "Doc_01 \u00a74 (unchanged)"
+      ],
+      "answer_versioning_expected": true,
+      "affected_claims": [
+        "pricing claim only"
+      ],
+      "expected_telemetry_events": [
+        "answer_version",
+        "claim_generated"
+      ],
+      "expected_grounding_behavior": "No full-corpus re-search."
+    },
+    {
+      "scenario_id": "LD-05",
+      "category": "late_detail",
+      "transcript_chunks": [
+        "I need a domestic flight expense reimbursed.",
+        "[Answer v1 delivered]",
+        "Actually, the trip was international."
+      ],
+      "expected_controller_decisions": [
+        "WAIT\u2192RETRIEVE(provisional)",
+        "-",
+        "RETRIEVE(late_detail)"
+      ],
+      "trigger_type_if_retrieve": "late_detail",
+      "expected_sub_intents": [
+        "international approval and currency requirements"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_09"
+      ],
+      "expected_relevant_sections": [
+        "Doc_09 \u00a72",
+        "Doc_09 \u00a73"
+      ],
+      "expected_answer_summary": "v2: adds director pre-approval and foreign-currency receipt requirement; the single-expense receipt-threshold claim (Doc_08 \u00a74) is unaffected since international policy does not override it.",
+      "expected_citations": [
+        "Doc_09 \u00a72 (new)",
+        "Doc_09 \u00a73 (new)",
+        "Doc_08 \u00a74 (unchanged)"
+      ],
+      "answer_versioning_expected": true,
+      "affected_claims": [
+        "approval requirement claim",
+        "currency verification claim"
+      ],
+      "expected_telemetry_events": [
+        "answer_version",
+        "claim_generated"
+      ],
+      "expected_grounding_behavior": "Demonstrates the guide's own worked example: refine, do not restart."
+    },
+    {
+      "scenario_id": "LD-06",
+      "category": "late_detail",
+      "transcript_chunks": [
+        "I need to book catering for 20 people.",
+        "[Answer v1 delivered]",
+        "Actually, make it 40 people."
+      ],
+      "expected_controller_decisions": [
+        "WAIT\u2192RETRIEVE(provisional)",
+        "-",
+        "WAIT/NO_CHANGE"
+      ],
+      "trigger_type_if_retrieve": "late_detail",
+      "expected_sub_intents": [
+        "catering capacity check 40"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_05"
+      ],
+      "expected_relevant_sections": [
+        "Doc_05 \u00a76"
+      ],
+      "expected_answer_summary": "v2: no claim changes \u2014 40 remains comfortably within package capacity and above the 15-attendee minimum; version does not increment.",
+      "expected_citations": [
+        "Doc_05 \u00a76 (confirmed unchanged)"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "claim_generated"
+      ],
+      "expected_grounding_behavior": "Negative control: system correctly determines no claim requires updating; must not spuriously bump the answer version."
+    },
+    {
+      "scenario_id": "LD-07",
+      "category": "late_detail",
+      "transcript_chunks": [
+        "Book the Convention Wing for a workshop with 90 people.",
+        "[Answer v1 delivered]",
+        "Actually, we now need breakout rooms too."
+      ],
+      "expected_controller_decisions": [
+        "WAIT\u2192RETRIEVE(provisional)",
+        "-",
+        "RETRIEVE(late_detail)"
+      ],
+      "trigger_type_if_retrieve": "late_detail",
+      "expected_sub_intents": [
+        "combined room configuration for breakouts"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_03"
+      ],
+      "expected_relevant_sections": [
+        "Doc_03 \u00a72",
+        "Doc_03 \u00a73"
+      ],
+      "expected_answer_summary": "v2: room selection updates to combined B-204+B-210 configuration and pricing; booking lead-time claim (15 business days) unchanged since B-204 remains part of the booking.",
+      "expected_citations": [
+        "Doc_03 \u00a72 (updated)",
+        "Doc_03 \u00a73 (updated)",
+        "Doc_03 \u00a77 (unchanged)"
+      ],
+      "answer_versioning_expected": true,
+      "affected_claims": [
+        "room/capacity claim",
+        "pricing claim"
+      ],
+      "expected_telemetry_events": [
+        "answer_version",
+        "claim_generated"
+      ],
+      "expected_grounding_behavior": "No full-corpus re-search."
+    },
+    {
+      "scenario_id": "UC-01",
+      "category": "uncertainty",
+      "transcript_chunks": [
+        "Does the Bangalore office have a gym,",
+        "and if so what are the hours?"
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "Bangalore gym/fitness facility hours"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_19"
+      ],
+      "expected_relevant_sections": [],
+      "expected_answer_summary": "No gym/fitness facility is mentioned for the Bangalore campus in the retrieved corpus.",
+      "expected_citations": [],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "uncertainty_flagged"
+      ],
+      "expected_grounding_behavior": "Explicit uncertainty; must NOT borrow Doc_20 \u00a75 (Pune fitness room) as if it applied to Bangalore."
+    },
+    {
+      "scenario_id": "UC-02",
+      "category": "uncertainty",
+      "transcript_chunks": [
+        "What's the sabbatical leave policy?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "sabbatical leave policy"
+      ],
+      "expected_retrieved_doc_ids": [],
+      "expected_relevant_sections": [],
+      "expected_answer_summary": "No sabbatical/extended unpaid leave policy exists in the retrieved corpus.",
+      "expected_citations": [],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "uncertainty_flagged"
+      ],
+      "expected_grounding_behavior": "Explicit uncertainty; no fabricated citation."
+    },
+    {
+      "scenario_id": "UC-03",
+      "category": "uncertainty",
+      "transcript_chunks": [
+        "Is there an EV charging station at either office?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "EV charging station availability"
+      ],
+      "expected_retrieved_doc_ids": [],
+      "expected_relevant_sections": [],
+      "expected_answer_summary": "No mention of EV charging stations at either campus in the retrieved corpus.",
+      "expected_citations": [],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "uncertainty_flagged"
+      ],
+      "expected_grounding_behavior": "Explicit uncertainty."
+    },
+    {
+      "scenario_id": "UC-04",
+      "category": "uncertainty",
+      "transcript_chunks": [
+        "What's the relocation assistance policy for an international transfer?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "relocation assistance policy"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_21"
+      ],
+      "expected_relevant_sections": [
+        "Doc_21 \u00a71 (partial, business-travel only)"
+      ],
+      "expected_answer_summary": "No relocation-assistance policy exists; only business-travel visa support (Doc_21) is covered, which is explicitly distinct.",
+      "expected_citations": [
+        "Doc_21 \u00a71 (context only, not a full answer)"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "uncertainty_flagged"
+      ],
+      "expected_grounding_behavior": "Partial context surfaced but clearly distinguished from the actual (unanswerable) question."
+    },
+    {
+      "scenario_id": "UC-05",
+      "category": "uncertainty",
+      "transcript_chunks": [
+        "Does the company have a pet-friendly office policy?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "pet policy"
+      ],
+      "expected_retrieved_doc_ids": [],
+      "expected_relevant_sections": [],
+      "expected_answer_summary": "No pet policy exists in the retrieved corpus.",
+      "expected_citations": [],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "uncertainty_flagged"
+      ],
+      "expected_grounding_behavior": "Explicit uncertainty."
+    },
+    {
+      "scenario_id": "UC-06",
+      "category": "uncertainty",
+      "transcript_chunks": [
+        "What's the wellness stipend amount for mental health support?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "wellness/mental-health stipend"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_18"
+      ],
+      "expected_relevant_sections": [
+        "Doc_18 \u00a74 (distinct topic only)"
+      ],
+      "expected_answer_summary": "No mental-health/wellness stipend exists; only a home-office equipment stipend (Doc_18 \u00a74) is covered, which is a distinct benefit.",
+      "expected_citations": [
+        "Doc_18 \u00a74 (context only, not conflated with the question)"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "uncertainty_flagged"
+      ],
+      "expected_grounding_behavior": "Tests against false-positive answering by conflating an adjacent but different stipend."
+    },
+    {
+      "scenario_id": "DUP-01",
+      "category": "duplicate_retrieval",
+      "transcript_chunks": [
+        "What IT security training do new employees need to complete?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "new employee security training requirement"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_12",
+        "Doc_17"
+      ],
+      "expected_relevant_sections": [
+        "Doc_12 \u00a73",
+        "Doc_17 \u00a73"
+      ],
+      "expected_answer_summary": "Must complete IT security awareness training within 5 working days of starting/receiving a device.",
+      "expected_citations": [
+        "Doc_12 \u00a73",
+        "Doc_17 \u00a73"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "fusion"
+      ],
+      "expected_grounding_behavior": "Near-duplicate chunks deduplicated into one unified fact citing both sources, not stated twice."
+    },
+    {
+      "scenario_id": "DUP-02",
+      "category": "duplicate_retrieval",
+      "transcript_chunks": [
+        "How soon after starting must I finish security training?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "security training deadline"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_12",
+        "Doc_17"
+      ],
+      "expected_relevant_sections": [
+        "Doc_12 \u00a73",
+        "Doc_17 \u00a73"
+      ],
+      "expected_answer_summary": "Within 5 working days.",
+      "expected_citations": [
+        "Doc_12 \u00a73",
+        "Doc_17 \u00a73"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "fusion"
+      ],
+      "expected_grounding_behavior": "Same dedup pathway as DUP-01, different phrasing."
+    },
+    {
+      "scenario_id": "DUP-03",
+      "category": "duplicate_retrieval",
+      "transcript_chunks": [
+        "What's the visitor access procedure at Pune and Bangalore?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "multi_intent",
+      "expected_sub_intents": [
+        "Bangalore visitor access",
+        "Pune visitor access"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_19",
+        "Doc_20"
+      ],
+      "expected_relevant_sections": [
+        "Doc_19 \u00a76",
+        "Doc_20 \u00a76"
+      ],
+      "expected_answer_summary": "Both campuses: pre-register 2 hours in advance, present government-issued photo ID.",
+      "expected_citations": [
+        "Doc_19 \u00a76",
+        "Doc_20 \u00a76"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "fusion"
+      ],
+      "expected_grounding_behavior": "Near-identical content but cited per-campus, not merged into a single citation, since the question is campus-specific."
+    },
+    {
+      "scenario_id": "DUP-04",
+      "category": "duplicate_retrieval",
+      "transcript_chunks": [
+        "What's the process for registering a new device with IT?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "new device registration process"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_17"
+      ],
+      "expected_relevant_sections": [
+        "Doc_17 \u00a72"
+      ],
+      "expected_answer_summary": "Company-issued devices must be registered with IT before first use.",
+      "expected_citations": [
+        "Doc_17 \u00a72"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "fusion"
+      ],
+      "expected_grounding_behavior": "Negative control: must NOT conflate with Doc_16 (password policy) despite both being IT-Security-adjacent documents."
+    },
+    {
+      "scenario_id": "CONF-01",
+      "category": "conflicting_evidence",
+      "transcript_chunks": [
+        "What's the notice period for resigning?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "resignation notice period"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_14",
+        "Doc_15"
+      ],
+      "expected_relevant_sections": [
+        "Doc_14 \u00a72",
+        "Doc_15 \u00a72"
+      ],
+      "expected_answer_summary": "Surfaces both: handbook states 30 days, 2026 memo revises to 45 days and explicitly supersedes the handbook; answer leads with 45 days while disclosing the conflict.",
+      "expected_citations": [
+        "Doc_14 \u00a72",
+        "Doc_15 \u00a72"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "claim_generated"
+      ],
+      "expected_grounding_behavior": "Conflict explicitly surfaced with both citations; not silently resolved to one source."
+    },
+    {
+      "scenario_id": "CONF-02",
+      "category": "conflicting_evidence",
+      "transcript_chunks": [
+        "How many days do I have to submit my travel expense receipts?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "receipt submission window"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_08",
+        "Doc_11"
+      ],
+      "expected_relevant_sections": [
+        "Doc_08 \u00a73",
+        "Doc_11 \u00a72"
+      ],
+      "expected_answer_summary": "Surfaces both: original policy states 30 days, 2026 addendum reduces this to 15 days for trips after the effective transition date.",
+      "expected_citations": [
+        "Doc_08 \u00a73",
+        "Doc_11 \u00a72"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "claim_generated"
+      ],
+      "expected_grounding_behavior": "Conflict surfaced with the addendum's conditional applicability noted."
+    },
+    {
+      "scenario_id": "CONF-03",
+      "category": "conflicting_evidence",
+      "transcript_chunks": [
+        "Is the 45-day notice period for all employees or just managers?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "notice period scope by role"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_15"
+      ],
+      "expected_relevant_sections": [
+        "Doc_15 \u00a73"
+      ],
+      "expected_answer_summary": "Applies to all full-time employees company-wide; no role or level is exempted.",
+      "expected_citations": [
+        "Doc_15 \u00a73"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started"
+      ],
+      "expected_grounding_behavior": "Correct reading reinforces resolution of the CONF-01 conflict rather than introducing ambiguity."
+    },
+    {
+      "scenario_id": "CONF-04",
+      "category": "conflicting_evidence",
+      "transcript_chunks": [
+        "Do I need to submit receipts within 30 days or 15 days for a trip I completed last week?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "receipt window applicable to a specific recent trip"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_08",
+        "Doc_11"
+      ],
+      "expected_relevant_sections": [
+        "Doc_08 \u00a73",
+        "Doc_11 \u00a72",
+        "Doc_11 \u00a74"
+      ],
+      "expected_answer_summary": "Requires date-based resolution using the addendum's effective-date transition clause to determine whether the 30-day or 15-day window applies to this specific trip.",
+      "expected_citations": [
+        "Doc_08 \u00a73",
+        "Doc_11 \u00a72",
+        "Doc_11 \u00a74"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started",
+        "claim_generated"
+      ],
+      "expected_grounding_behavior": "Harder temporal-reasoning variant of CONF-02; explicit uncertainty acceptable if the trip date relative to the effective date cannot be determined from the utterance."
+    },
+    {
+      "scenario_id": "HYB-01",
+      "category": "hybrid_retrieval",
+      "transcript_chunks": [
+        "What is SEC-014's password rotation schedule for admin accounts?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "SEC-014 admin password rotation"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_16"
+      ],
+      "expected_relevant_sections": [
+        "Doc_16 \u00a73"
+      ],
+      "expected_answer_summary": "Admin accounts rotate every 60 days under SEC-014.",
+      "expected_citations": [
+        "Doc_16 \u00a73"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started"
+      ],
+      "expected_grounding_behavior": "Sparse/BM25-dominant retrieval on exact code + number."
+    },
+    {
+      "scenario_id": "HYB-02",
+      "category": "hybrid_retrieval",
+      "transcript_chunks": [
+        "Can someone whose job doesn't need them at a desk all day work outside the office?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "remote work eligibility, paraphrased"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_18"
+      ],
+      "expected_relevant_sections": [
+        "Doc_18 \u00a71",
+        "Doc_18 \u00a72"
+      ],
+      "expected_answer_summary": "Roles not requiring regular physical presence are eligible for remote arrangements, agreed jointly with the manager.",
+      "expected_citations": [
+        "Doc_18 \u00a71",
+        "Doc_18 \u00a72"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started"
+      ],
+      "expected_grounding_behavior": "Dense/semantic-dominant retrieval; no literal keyword overlap with 'remote work'."
+    },
+    {
+      "scenario_id": "HYB-03",
+      "category": "hybrid_retrieval",
+      "transcript_chunks": [
+        "What's the exact rotation schedule for admin passwords,",
+        "and can remote employees who mostly do independent work skip coming in regularly?"
+      ],
+      "expected_controller_decisions": [
+        "WAIT",
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "multi_intent",
+      "expected_sub_intents": [
+        "admin password rotation (lexical)",
+        "remote eligibility for independent work (semantic)"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_16",
+        "Doc_18"
+      ],
+      "expected_relevant_sections": [
+        "Doc_16 \u00a73",
+        "Doc_18 \u00a71",
+        "Doc_18 \u00a72"
+      ],
+      "expected_answer_summary": "60-day admin rotation; independent-work roles may be eligible for remote arrangements per manager agreement.",
+      "expected_citations": [
+        "Doc_16 \u00a73",
+        "Doc_18 \u00a71",
+        "Doc_18 \u00a72"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "decomposition",
+        "retrieval_started",
+        "fusion"
+      ],
+      "expected_grounding_behavior": "Demonstrates hybrid + multi-intent combined: one sub-query needs sparse dominance, the other dense dominance."
+    },
+    {
+      "scenario_id": "HYB-04",
+      "category": "hybrid_retrieval",
+      "transcript_chunks": [
+        "Room B-204 Wi-Fi capacity"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "Room B-204 Wi-Fi capacity"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_03"
+      ],
+      "expected_relevant_sections": [
+        "Doc_03 \u00a74"
+      ],
+      "expected_answer_summary": "Supports 200 simultaneous connections.",
+      "expected_citations": [
+        "Doc_03 \u00a74"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started"
+      ],
+      "expected_grounding_behavior": "Sparse-dominant exact-code retrieval."
+    },
+    {
+      "scenario_id": "HYB-05",
+      "category": "hybrid_retrieval",
+      "transcript_chunks": [
+        "What kind of atmosphere does the Bangalore convention space have for informal networking?"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "Bangalore venue ambience, paraphrased"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_03"
+      ],
+      "expected_relevant_sections": [
+        "Doc_03 \u00a75"
+      ],
+      "expected_answer_summary": "Open, glass-walled design with a landscaped atrium used for informal networking breaks.",
+      "expected_citations": [
+        "Doc_03 \u00a75"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started"
+      ],
+      "expected_grounding_behavior": "Dense-dominant retrieval; no literal keyword overlap with 'atmosphere' or 'networking' in the source text."
+    },
+    {
+      "scenario_id": "HYB-06",
+      "category": "hybrid_retrieval",
+      "transcript_chunks": [
+        "INR 15,000 stipend for setting up a home workspace"
+      ],
+      "expected_controller_decisions": [
+        "RETRIEVE"
+      ],
+      "trigger_type_if_retrieve": "provisional",
+      "expected_sub_intents": [
+        "home office equipment stipend amount"
+      ],
+      "expected_retrieved_doc_ids": [
+        "Doc_18"
+      ],
+      "expected_relevant_sections": [
+        "Doc_18 \u00a74"
+      ],
+      "expected_answer_summary": "Matches the one-time home office equipment stipend of INR 15,000.",
+      "expected_citations": [
+        "Doc_18 \u00a74"
+      ],
+      "answer_versioning_expected": false,
+      "affected_claims": [],
+      "expected_telemetry_events": [
+        "controller_decision",
+        "retrieval_started"
+      ],
+      "expected_grounding_behavior": "Mixed: exact number is lexical-friendly, 'setting up a home workspace' is a semantic paraphrase of 'home office equipment'."
+    }
+  ]
+}
